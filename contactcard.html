@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title> Contact Card </title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <meta name="description" content="write your description">
+  <script>
+            $(document).ready(function(){
+              $('.add-user').click(function(){
+                $('td').append(" " + $("#fname").val());
+
+                });
+
+              $('.add-user').click(function(){
+                $('td').append(" " + $("#lname").val());
+                });
+
+              $('.add-user').click(function(){
+                $('table').data('.description_data', " " + $("#description").val());
+                alert($('table').data('.description_data'));
+                });
+
+              $('.add-user').click(function(){
+                $('table').css('border','solid 1px black');
+                $('table').css('text-align', 'center');
+                $('table').css('border', '2px solid black');
+                $('table').css('border-radius', '5px');
+              });
+
+            });
+
+  
+  </script>
+  <style>
+    body {
+      height: 500px;
+    }
+    ul {
+      list-style-type: none;
+    }
+    .textbox {
+      margin: 10px 20px; 
+    }
+    .form {
+      position: relative;
+      right: 30px;
+    }
+    .submit {
+      position: relative;
+      left: 50px;
+      border: 2px solid black;
+      width: 230px;
+      text-align: center;
+      border-radius: 5px;
+      margin-bottom: 30px;
+    }
+    table {
+      width: 150px;
+      position: relative;
+      left:20px;
+    }
+    th {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="form">
+    <ul>
+      <li> First Name: <input class="textbox" type="text"  id="fname" /><br/><br/> </li>
+      <li> Last Name: <input class="textbox" type="text"  id="lname" /><br/><br/> </li>
+      <li> Description <textarea class="textbox"  id="description" /></textarea><br/><br/> </li>
+    </ul>
+    <div class="submit">
+      <p> the description will alert you </p>
+      <button class="add-user">Add User</button><br/><br/>
+    </div>
+  </div>
+  <table>
+    <th>
+      <td> </td>
+    </th>
+  </table>
+</body>
+</html>
